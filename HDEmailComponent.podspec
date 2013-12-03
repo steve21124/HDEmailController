@@ -9,4 +9,6 @@ Pod::Spec.new do |s|
   s.description  = 'Just a singleton for sending email.’
   s.source_files = ‘HDEmailComponent/HDEmailController/*.{h,m,xib}'
   s.requires_arc = true
+  s.frameworks = 'MessageUI'
+  s.platform = :ios
 end
