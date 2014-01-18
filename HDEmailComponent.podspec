@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'A simple email singleton.’
   s.homepage = 'https://github.com/jgorecki/HDEmailComponent'
   s.author   = { 'Joe Gorecki' => 'j@harbordev.com' }
-  s.source   = { :git => 'https://github.com/jgorecki/HDWebBrowser',:branch=>'master', :tag => ‘1.0.0’ }
+  s.source   = { :git => 'https://github.com/steve21124/HDEmailController',:branch=>'master', :tag => ‘1.0.0’ }
   s.description  = 'Just a singleton for sending email.’
   s.source_files = ‘HDEmailComponent/HDEmailController/*.{h,m,xib}'
   s.requires_arc = true
