@@ -14,6 +14,8 @@
 
 -(void)sendEmail:(NSArray *)to
      withSubject:(NSString *)subject
-     withMessage:(NSString *)message withViewController:(UIViewController *)aViewController;
+     withMessage:(NSString *)message
+  withAttachment:(NSString *)filePath
+     withViewController:(UIViewController *)aViewController;
 
 @end

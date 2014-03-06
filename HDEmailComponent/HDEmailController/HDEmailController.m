@@ -33,7 +33,7 @@
 
 #pragma mark - Mail
 
--(void)sendEmail:(NSArray *)to withSubject:(NSString *)subject withMessage:(NSString *)message withViewController:(UIViewController *)aViewController{
+-(void)sendEmail:(NSArray *)to withSubject:(NSString *)subject withMessage:(NSString *)message withAttachment:(NSString *)filePath withViewController:(UIViewController *)aViewController{
     
     if([MFMailComposeViewController canSendMail]){
     
@@ -48,6 +48,13 @@
         [mail setMessageBody:body isHTML:YES];
         
         [mail setToRecipients:to];
+        
+        if (filePath) {
+            if([[NSFileManager defaultManager]fileExistsAtPath:filePath isDirectory:NO]){
+                NSData *noteData = [NSData dataWithContentsOfFile:filePath];
+                [mail addAttachmentData:noteData mimeType:@"video/mp4"  fileName:@"video.mp4"];
+            }
+        }
         
         [aViewController presentViewController:mail animated:YES completion:nil];
         
